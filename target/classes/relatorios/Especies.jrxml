@@ -1,0 +1,104 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Especies" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b5ca559b-2dcb-4c7a-9fdc-2a141c3dc502">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="aves"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<query language="sql"><![CDATA[select*from leituras]]></query>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="leituras"/>
+	</field>
+	<field name="contagem" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="contagem"/>
+		<property name="com.jaspersoft.studio.field.label" value="contagem"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="leituras"/>
+	</field>
+	<field name="especie" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="especie"/>
+		<property name="com.jaspersoft.studio.field.label" value="especie"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="leituras"/>
+	</field>
+	<field name="censo_id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="censo_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="censo_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="leituras"/>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="leituras"/>
+	</field>
+	<background/>
+	<title height="72">
+		<element kind="frame" uuid="648aaff1-18a6-45d1-adec-56f45147e37d" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699">
+			<element kind="staticText" uuid="34b4bd6d-aaf7-4446-80e2-f249b41131b4" x="20" y="20" width="234" height="43" forecolor="#FFFFFF" fontSize="34.0" bold="true">
+				<text><![CDATA[Aves Marinhas ]]></text>
+			</element>
+			<element kind="staticText" uuid="933c46d6-2db0-4946-b17c-8d689911d567" x="395" y="43" width="180" height="20" forecolor="#FFFFFF" fontSize="14.0" bold="false" hTextAlign="Right">
+				<text><![CDATA[Espécies Registradas ]]></text>
+			</element>
+		</element>
+	</title>
+	<pageHeader height="12"/>
+	<columnHeader height="31">
+		<element kind="line" uuid="a98a97f6-0384-4d79-a923-de3b27fcca5f" x="-30" y="0" width="605" height="1" forecolor="#666666"/>
+		<element kind="staticText" uuid="db72674a-674b-41da-a4e2-56e0dca57b9f" x="280" y="1" width="130" height="19">
+			<text><![CDATA[especie]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9bc22816-a048-4083-b480-2e3a71d157b6"/>
+		</element>
+		<element kind="staticText" uuid="2b0e8c7b-f08c-4065-a605-de186f6e3962" x="190" y="1" width="30" height="20">
+			<text><![CDATA[tipo]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f74fe178-5084-45eb-b008-ceec964e4210"/>
+		</element>
+		<element kind="staticText" uuid="4f3a36a2-fdfa-44a8-857d-00d37dcb0bfb" x="90" y="1" width="58" height="20">
+			<text><![CDATA[censo_id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="298fa3f8-cccf-4990-8032-07bb6aedbb0d"/>
+		</element>
+		<element kind="staticText" uuid="55ccfe52-f4a3-43cc-b3cb-36938b1cb695" x="20" y="2" width="25" height="21">
+			<text><![CDATA[id]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="145e28c9-24e8-4621-ae4d-54cfa29094ee"/>
+		</element>
+		<element kind="line" uuid="1ae2cebe-5253-48fc-a869-c61f1b53d6b8" positionType="FixRelativeToBottom" x="-30" y="22" width="605" height="1"/>
+		<element kind="staticText" uuid="5040598f-b7a0-4de2-b96e-9ddbaee786ce" x="480" y="0" width="74" height="20">
+			<text><![CDATA[contagem]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f7023cf1-58d6-4ecc-b3eb-a5e5c7d22db6"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="44">
+			<element kind="textField" uuid="477fc000-cabf-4540-8d91-0880fb15925f" x="465" y="11" width="90" height="30">
+				<expression><![CDATA[$F{contagem}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f7023cf1-58d6-4ecc-b3eb-a5e5c7d22db6"/>
+			</element>
+			<element kind="textField" uuid="cd5883b3-0359-405e-89c6-6b0c8de9bdd3" x="270" y="11" width="160" height="22">
+				<expression><![CDATA[$F{especie}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9bc22816-a048-4083-b480-2e3a71d157b6"/>
+			</element>
+			<element kind="textField" uuid="bd5dec65-5bbd-4679-9b14-740d58463fcd" x="170" y="10" width="88" height="20">
+				<expression><![CDATA[$F{tipo}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f74fe178-5084-45eb-b008-ceec964e4210"/>
+			</element>
+			<element kind="textField" uuid="257a26e8-c2b0-44da-a701-94edf476b544" x="80" y="9" width="68" height="20">
+				<expression><![CDATA[$F{censo_id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="298fa3f8-cccf-4990-8032-07bb6aedbb0d"/>
+			</element>
+			<element kind="textField" uuid="0cec7d04-2b27-4a4a-abbe-86cb5dedc020" x="10" y="8" width="35" height="15">
+				<expression><![CDATA[$F{id}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="145e28c9-24e8-4621-ae4d-54cfa29094ee"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter/>
+	<pageFooter height="17">
+		<element kind="textField" uuid="afd82fcd-88e8-4a16-a7b9-7f7bd43d447c" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" hTextAlign="Right">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="a7bb7bb6-9f53-404a-98da-47a3e6ef6ffa" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" evaluationTime="Report">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="99a94eac-9acd-4b91-8706-90aa95ccdd7a" x="0" y="4" width="100" height="13" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary/>
+</jasperReport>
